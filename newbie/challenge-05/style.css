@@ -1,0 +1,128 @@
+:root {
+  /* Primary */
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+
+  /* Neutral */
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --font-body-size: 14px;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500; /* poids par défaut */
+  font-size: 14px;
+  color: var(--black);
+  background-color: var(--cream);
+}
+
+.container {
+
+    display: grid;
+    margin: 20px,20px;
+    grid-template-columns: 1fr;
+    
+    background-color: var(--white);
+    border-radius: 15px ;
+    
+}
+
+
+.image{
+    background-image: url("./images/image-product-mobile.jpg");
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px 15px 0 0 ;
+}
+
+.product{
+
+    padding: 25px;
+
+}
+
+
+.product__type{
+    color: var(--grey);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 10px;
+}
+
+.product__title{
+
+    font-family: "Fraunces", sans-serif;
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-bottom: 20px;
+}
+
+.product__desc {
+   font-size: 14px;
+  line-height: 1.6;
+    color: var(--grey);
+
+}
+
+.product__price{
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.product__price__discounted{
+    color: var(--green-500);
+    font-family: "Fraunces";
+    font-size: 2.5rem;
+}
+
+.product__price__not__discounted{
+    color: var(--grey);
+    text-decoration: line-through;
+}
+
+.product__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--white);
+    background-color: var(--green-500);
+    gap: 0.5rem;
+}
+
+.product__button::before{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url("./images/icon-cart.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.product__button:hover{
+
+    background-color: var(--green-700);
+    cursor: pointer;
+}
+
+
+@media (min-width: 600px) {
+  .image {
+    background-image: url("./images/image-product-desktop.jpg");
+    border-radius: 15px 0 0 15px;
+    height: 100%;
+    width: 100%;
+}
+    .container {
+    grid-template-columns: 1fr 1fr;  /* 2 colonnes = 1 ligne */
+ }
+}
