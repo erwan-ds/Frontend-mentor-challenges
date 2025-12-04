@@ -269,3 +269,8 @@ li.visual::before{
     cursor: pointer;
     margin-top: 20px;
 }
+
+.button:hover{
+
+    background: var(--gradient-bg);
+}
