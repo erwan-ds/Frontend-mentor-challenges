@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Results summary component</title>
 
@@ -15,33 +16,72 @@
   </style>
 </head>
 <body>
-
-  Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
   
-  Summary
 
-  Reaction
-  80 / 100
+  <div class="container">
+    <div class="grid">
+      <div class="result">
 
-  Memory
-  92 / 100
+        <div class="title">Your Result</div>
+        <div class="score">  
+          <div></div>
+          <div class="first">76</div>
+          <div class="second">of 100</div>
+          <div></div>
+      </div>
+        <div class="grats">
+           Great
+        </div>
+        <div class="desc">
+          You scored higher than 65% of the people who have taken these tests.
+  
+        </div>
 
-  Verbal
-  61 / 100
 
-  Visual
-  72 / 100
+      </div>
 
-  Continue
+      <div class="summary">
+        <div class="sum">
+          Summary
+        </div>
+        <ul>
+          <li class="reaction">
+            Reaction
+            <div class="note">80 <div class="grey"> / 100</div></div>
+          </li>
+          <li class="memory">
+            Memory
+            <div class="note">92 <div class="grey"> / 100</div></div>
+          </li>
+          <li class="verbal">
+            Verbal
+            <div class="note">61 <div class="grey"> / 100</div></div>
+          </li>
+          <li class="visual">  
+            Visual
+            <div class="note">72 <div class="grey"> / 100</div></div>
+          </li>
+        </ul>
+        <div class="button">
+          Continue
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <br>
+
+
+
+
+
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Erwan CHEVALIER</a>.
   </div>
 </body>
 </html>
