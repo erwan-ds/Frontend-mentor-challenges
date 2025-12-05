@@ -1,0 +1,168 @@
+
+:root{
+
+    --Navy-950 :hsl(233, 47%, 7%); /* (main bg) */
+    --Blue-950 :hsl(244, 37%, 16%); /* (card bg) */
+    --Purple-500 : hsl(277, 64%, 61%); /* accent */
+
+    --White-1 : hsl(0, 0%, 100%) ; /*(main heading, stats)*/
+    --White-2 : hsla(0, 0%, 100%, 0.75) ; /* (main paragraph) */
+    --White-3 : hsla(0, 0%, 100%, 0.6) ; /*(stat headings) */
+
+    --font-size : 1rem;
+
+}
+
+
+
+body {
+    font-family: "Inter", sans-serif;;
+    background: var(--Navy-950);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+
+}
+
+.subtitle {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+
+.container{
+    width: 350px;
+    background: var(--Blue-950);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "Image"
+      "content";
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 5%;
+}
+
+.image {
+  grid-area: Image;
+  position: relative;
+  height: clamp(200px, 35vw, 400px);
+  overflow: hidden;
+}
+
+.image picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* l’image occupe l’espace au max */
+}
+
+.image::after{
+
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--Purple-500);
+  opacity: 0.6; /* opacité du filtre */
+  mix-blend-mode: multiply;
+}
+
+.content{
+    grid-area: content;
+    padding: 10%;
+    text-align: center;
+
+
+}
+
+.content h2{
+
+    color: var(--White-1);
+}
+
+.content span{
+    color: var(--Purple-500);
+}
+
+.content p{
+    color: var(--White-2);
+   
+}
+
+.data{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-areas: "a" 
+    "b"
+    "c";
+}
+.a{
+    grid-area: a;
+}
+
+.b{
+    grid-area: b;
+}
+
+.c{
+    grid-area: c;
+}
+
+.data div{
+    min-width: 0;
+    padding: 5%;
+}
+
+.data strong{
+    color: var(--White-1);
+
+}
+
+.data span{
+    min-width: 0;
+    color: var(--White-3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+@media (min-width : 600px){
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "content Image";
+        width: auto;
+        max-height: 400px;
+    }
+    .content{
+        text-align: left;
+
+    }
+    .image {
+        height: auto; 
+
+    }
+    .image picture,
+    .image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        
+        }
+    .data{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "a b c";
+    }
+    .data span{
+        font-size: 10px;
+    }
+}
