@@ -109,6 +109,12 @@ body {
     color: var(--blue-500);
     text-decoration: underline;
 }
+
+
+.product__billing__left:hover{
+
+    text-decoration: none;
+}
 .grid__vert{
 
     display: grid;
