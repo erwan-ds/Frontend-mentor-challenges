@@ -26,7 +26,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     border-radius: 10px;
-      margin: clamp(10px, 10vw, 25%);  
+    margin: clamp(10px, 10vw, 25%);  
 
 }
 
