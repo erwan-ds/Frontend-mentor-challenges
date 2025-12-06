@@ -1,0 +1,129 @@
+:root{
+
+    --gold-500: hsl(31, 77%, 52%);
+    --Cyan-800: hsl(184, 100%, 22%);
+    --Green-950: hsl(179, 100%, 13%);
+
+
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    
+}
+
+
+.grid{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sedans"
+      "suvs"
+      "luxury";
+
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+h2{
+    font-family: "Big Shoulders Display", serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+
+}
+
+.grid div{
+    max-width: 200px;
+    height: 350px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.sedans{
+
+    background-color: var(--gold-500);
+}
+
+.suvs{
+    background-color: var(--Cyan-800);
+}
+
+.luxury{
+    background-color: var(--Green-950);
+}
+
+button{
+    all: unset;
+    display: inline-block; /* keeps layout usable */
+    cursor: pointer; 
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px ;
+    width: 100px;
+    margin-top: auto;
+    text-align: center;
+}
+
+.sedans button{
+    color: var(--gold-500);
+}
+
+.suvs button{
+    color: var(--Cyan-800);
+}
+
+.luxury button{
+    color: var(--Green-950);
+}
+
+.sedans button:hover{
+   background-color: var(--gold-500);
+   color: white;
+   border: 2px solid white;
+}
+
+.suvs button:hover{
+    background-color: var(--Cyan-800);
+    color: white;
+    border: 2px solid white;
+}
+
+.luxury button:hover{
+    background-color: var(--Green-950);
+    color: white;
+    border: 2px solid white;
+}
+
+
+@media (min-width : 700px){
+
+
+    .grid{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "sedans suvs luxury";
+    
+    }
+    .grid div{
+        min-height: 400px;
+        max-width: 200px;
+    }
+
+
+}
