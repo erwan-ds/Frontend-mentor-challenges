@@ -1,0 +1,126 @@
+:root{
+
+    --Teal-500 : hsl(179,62%,43%);
+    --Green-400 : hsl(71,73%,54%);
+
+    --Teal-100 : hsl(204,43%,93%);
+    --Gray-500 : hsl(218,22%,67%);
+
+    --font-size : 16px;
+
+}
+
+body{
+    font-family: "Karla", sans-serif;
+    font-weight: 400;
+    background: var(--Teal-100);
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.grid{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "community"
+      "subscription"
+      "why";
+    max-width: 300px;
+    margin: auto;
+
+    border-radius: 5px;
+}
+
+
+
+.community{
+
+    background: white;
+    border-radius: 5px 5px 0 0;
+    padding: 20px;
+    color: var(--Gray-500)
+}
+.community h2{
+    color: var(--Teal-500);
+}
+
+.community h3 {
+    color: var(--Green-400);
+    
+}
+
+.desktopgrid{
+    gap: 0;
+    color: white;
+}
+
+h3{
+    margin: 0;
+
+}
+.subscription{
+
+    background: var(--Teal-500) ;
+    padding: 20px;
+    
+}
+
+.why{
+    padding: 20px;
+
+    background-color: color-mix(in hsl, var(--Teal-500) 80%, white);
+    border-radius: 0 0 5px 5px ;
+
+}
+h3 {
+    padding-bottom: 15px;
+}
+
+.sign  {
+    padding-top: 15px;
+    
+
+}
+
+.sign button{
+    all: unset;      
+    cursor: pointer;
+    width: 100%;
+        box-sizing: border-box;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--Green-400);
+}
+
+@media (min-width : 600px){
+
+
+    .grid{
+
+        grid-template-columns: 1fr ;
+        grid-template-areas:
+            "community"
+            "desktopgrid";
+        min-width: 550px;
+    }
+
+    .desktopgrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-areas:
+            "subscription why";
+
+    }
+
+    .why{
+        border-radius: 0 0 5px 0 ;
+    }
+
+    .subscription{
+        border-radius: 0 0 0 5px ;
+    }
+}
