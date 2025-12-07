@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  
   
   <title>Frontend Mentor | Profile card component</title>
 
@@ -15,21 +20,46 @@
   </style>
 </head>
 <body>
-  Victor Crest
-  26
-  London
 
-  80K
-  Followers
 
-  803K
-  Likes
+  <div class="card">
 
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <div class="card__header">
+      <img src="./images/bg-pattern-card.svg">
+    </div>
+
+    <div class="card__avatar">
+      <img src="./images/image-victor.jpg">
+
+    </div>
+
+    <div class="card__profil">
+      <h2>Victor Crest <span>26</span></h2>
+      
+      London
+    </div>
+    <div class="card__data">
+      <div>      
+        <h4>80K</h4>
+      Followers</div>
+      <div>      
+        <h4>803K</h4>
+      Likes</div>
+      <div>
+      <h4>1.4K</h4>
+      Photos</div>
+
+
+
+
+
+    </div>
+
+
   </div>
+
+
+
+
 </body>
 </html>
