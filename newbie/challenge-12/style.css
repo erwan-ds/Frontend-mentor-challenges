@@ -1,0 +1,198 @@
+:root{
+
+
+    --Magenta-dark : hsl(300,43%,22%);
+    --Pink : hsl(333,80%,67%);
+
+    --Magenta-grayish : hsl(303, 10%, 53%);
+    --Magenta-light : hsl(300, 24%, 96%);
+
+
+
+}
+
+
+body{
+
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+
+    background-image: 
+        url("./images/bg-pattern-top-mobile.svg"),
+        url("./images/bg-pattern-bottom-mobile.svg");
+    
+    background-repeat: no-repeat, no-repeat;
+
+    background-position: 
+        0% 0%,
+        100% 100%;
+
+    font-family: "League Spartan", sans-serif;
+    font-weight: 400;
+
+}
+
+
+
+.grid{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "head"
+    "rate"
+    "comment";
+    margin: 10px;
+    
+
+}
+.head,
+.rate,
+.comment {
+    padding: 20px;
+}
+
+.head {
+    color: var(--Magenta-dark);
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.comment__frame {
+    
+    margin : 20px ;
+    padding: 10px;
+    color: white;
+    background-color: var(--Magenta-dark);
+    border-radius: 5px;
+
+
+}
+
+.rate__frame {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  margin:  10px 20px;
+  padding: 20px;
+  background-color:  var(--Magenta-light);
+  color: var(--Magenta-dark);
+  font-weight: 700;
+
+}
+
+.rate__frame::before {
+    margin-right: 20px;
+  content: url("./images/icon-star.svg") " " url("./images/icon-star.svg") " " url("./images/icon-star.svg")
+           " " url("./images/icon-star.svg") " " url("./images/icon-star.svg");
+}
+
+
+.comment{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.frame__header{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 10px;
+}
+
+.frame__header img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 20px;
+
+}
+
+.frame__text{
+    margin: 20px 10px;
+}
+
+.frame__header p{
+    margin: 0;
+}
+
+.pink{
+    color: var(--Pink);
+}
+
+
+
+
+@media (min-width : 600px){
+
+
+    body{
+
+        background-image: 
+            url("./images/bg-pattern-top-desktop.svg"),
+            url("./images/bg-pattern-bottom-desktop.svg");
+
+        
+
+        background-position: 
+            0% 0%,
+            100% 100%;
+
+       
+    }
+
+
+    .head{
+        text-align: left;
+    }
+
+    .grid{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "customer"
+    "comment";
+    }
+
+    .customer{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"head rate";
+    
+
+    }
+
+    .comment{
+        flex-direction: row;
+    }
+
+    .comment__frame {
+    
+    margin :  calc(var(--m) * 20px) 20px calc((2 - var(--m)) * 20px) 20px ;
+    padding: 10px;
+
+    background-color: var(--Magenta-dark);
+    border-radius: 5px;
+
+
+    }
+
+    .rate__frame {
+  margin: 10px calc((2 - var(--m)) * 20px) 10px calc(var(--m) * 20px);
+      display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+
+
+
+}
