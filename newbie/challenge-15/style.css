@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif:wght@400&family=Outfit:wght@400;600;700&display=swap');
+
+
+:root {
+    --white: hsl(0, 0%, 100%);
+
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+
+    --brown-800: hsl(14, 45%, 36%);
+
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--stone-600);
+    background-color: var(--white);
+    min-height: 100dvh;
+    width: 100dvW;
+}
+
+
+.title {
+    color: var(--brown-800);
+    font-size: 24px;
+    font-family: "Young Serif",serif;
+    margin-bottom: 25px;
+}
+
+
+.name {
+    color: var(--stone-900);
+    font-size: 32px;
+    font-family: "Young Serif",serif;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.ingredients ul{
+    list-style-position: inside;  
+    padding-left: 5px;
+    list-style: none;
+    font-weight: 400;
+}
+
+
+
+.ingredients li{
+    position: relative;
+    padding-left: 25px;
+}
+
+.space{
+    padding-top: 50px;
+}
+.ingredients li::before{
+    content: "•";
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--brown-800); 
+}
+
+li{
+    margin-bottom: 12px;
+}
+
+.instructions ul{
+    list-style: decimal;
+    padding-left: 25px;
+    color: var(--brown-800);
+    
+}
+
+.stone{
+    color: var(--stone-600);
+}
+
+
+
+
+.rose{
+    color: var(--rose-800);
+}
+
+.brown{
+
+    color: var(--brown-800);
+
+}
+.tab{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 25px;
+}
+
+.tab div{
+    padding: 20px;
+}
+
+.image img {
+  width: 100%;          
+  height: 150px;      
+  object-fit: cover;    
+  object-position: center; 
+  display: block;      
+
+}
+
+.ingredients,
+.instructions,
+.nutrition,
+.overview{
+    margin: 0 5%;
+}
+
+@media (min-width : 600px){
+
+    body{
+        background-color: var(--stone-100);
+    }
+
+    .image{margin: 5%;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    
+
+    .grid{
+        display: grid ;
+        width: 500px;
+        margin: auto;
+        background-color: white;
+        border-radius: 15px;
+    }
+
+}
