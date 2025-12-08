@@ -1,0 +1,111 @@
+:root{
+    --purple : hsl(257, 40%, 49%);
+    --magenta : hsl(300, 69%, 71%);
+}
+
+body{
+
+    font-family: "Open Sans", sans-serif;    
+    font-weight: 400;
+
+    background-image: url("./images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-color: var(--purple);
+    
+}
+
+.grid{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 5%;
+}
+
+.image img{
+
+    width: 100%;
+
+}
+
+.text {
+    color: white;
+
+}
+
+
+.head{
+    font-size: 24px;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    margin: 20px 0 20px 0;
+}
+
+.register{
+    background-color: white;
+    color: var(--purple);
+    border-radius: 35px;
+    padding: 15px;
+    width: 125px;
+    text-align: center;
+    margin-top: 25px;
+      cursor: pointer;
+  transition: 0.3s;
+}
+.register:hover{
+    background-color: var(--magenta);
+    color: white;
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0, 0.3));
+}
+
+footer {
+    color: white;
+
+    text-align: right;
+
+}
+
+.circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  height: 32px;
+
+  border: 1px solid white;
+  border-radius: 50%;      /* cercle */
+  color: white;
+
+  margin: 0 8px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.circle:hover{
+    color: var(--magenta);
+    border: 1px solid var(--magenta);
+}
+
+
+@media (min-width : 600px){
+    body{
+
+        min-height: 100vh;
+        background-image: url("./images/bg-desktop.svg");  
+        background-attachment: fixed;
+        background-size:  auto 100%;
+    }   
+
+
+    
+    .grid{
+
+    grid-template-columns: 55% 5% 40%;
+
+    }
+
+}
