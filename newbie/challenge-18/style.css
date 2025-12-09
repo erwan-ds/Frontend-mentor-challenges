@@ -89,9 +89,7 @@ text-align: center;
   border: none;
   outline: none;
   padding: 1rem 1.5rem;
-  accent-color: var(--gray-900);
-  caret-color: var(--gray-900);
-  color: var(--gray-900);
+
 }
 
 .submit-btn {
