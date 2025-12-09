@@ -140,11 +140,10 @@ color: var(--very-dark-grayish-blue);
 
         bottom: -10px;
 
-        /* centré horizontalement */
+
         left: 68%;
         transform: translateX(-50%);
 
-        /* Le triangle */
         width: 0;
         height: 0;
         border-left: 10px solid transparent;
