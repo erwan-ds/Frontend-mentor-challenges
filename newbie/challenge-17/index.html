@@ -5,7 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./index.js" defer></script>
+
   <title>Frontend Mentor | Article preview component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,18 +25,55 @@
   </style>
 </head>
 <body>
+  <div class="card">
+    <img src="./images/drawers.jpg" alt="article image" class="card-image">
 
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
+  <div class="card-body">
+    <div class="body-title">
+      Shift the overall look and feel by adding these wonderful 
+      touches to furniture in your home
+    </div>
+    
+    <div class="body-desc">
+    Ever been in a room and felt like something was missing? Perhaps 
+    it felt slightly bare and uninviting. I’ve got some simple tips 
+    to help you make any room feel complete.
+    </div>
 
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
+    <div class="share__wrapper">
+    <div class="share">
+      <div class="share-avatar"></div>
+      <div class="share-data">
+        <span class="bold-dark">Michelle Appleton</span><br>
+        <span class="gray">28 Jun 2020</span>
 
-  Michelle Appleton
-  28 Jun 2020
+      </div>
 
-  Share
+
+      
+      <div class="share-button"><img src="./images/icon-share.svg" alt="share button"></div>
+      
+    </div>
+
+    <div class="shared close">
+
+       <div>SHARE</div>
+      <div><i class="fa-brands fa-facebook"></i></div>
+      <div><i class="fa-brands fa-instagram"></i></div>
+      <div><i class="fa-brands fa-pinterest"></i></div>
+      
+      
+      
+     <img class="back" src="./images/icon-shareW.svg" alt="Share icon">
+      
+      
+    </div>
+</div>
+  </div>
+
+
+  </div>
+
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
