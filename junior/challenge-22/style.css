@@ -1,0 +1,172 @@
+:root{
+      
+  --purple-50: hsl(260, 100%, 95%);
+  --purple-300: hsl(264, 82%, 80%);
+  --purple-500: hsl(263, 55%, 52%);
+
+  
+  --white: hsl(0, 0%, 100%);
+  --grey-100: hsl(214, 17%, 92%);
+  --grey-200: hsl(0, 0%, 81%);
+  --grey-300: hsl(215, 12%, 63%);
+  --grey-400: hsl(224, 10%, 45%);
+  --grey-500: hsl(217, 19%, 35%);
+  --dark-blue: hsl(219, 29%, 14%);
+  --black: hsl(0, 0%, 7%);
+
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Barlow Semi Condensed";
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "Daniel"
+    "Jonathan"
+    "Jeanette"
+    "Patrick"
+    "Kira";
+    gap: 16px;
+    margin: 1.5rem;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 28px 32px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    gap: 16px;
+}
+
+.Daniel{
+    grid-area: Daniel;
+}
+
+.Jeanette{
+    grid-area: Jeanette;
+}
+
+.Patrick {
+    grid-area: Patrick;
+}
+
+.Kira{
+    grid-area: Kira;
+}
+
+.Jonathan{
+    grid-area : Jonathan;
+}
+
+/*---card__header---*/
+
+.card__header{
+    display: flex;
+    flex-direction: row;
+    gap : 20px
+}
+
+.card__header img{
+
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    border: 2px solid var(--grey-400);
+
+}
+
+.card__header .name{
+    font-weight: 700;
+
+}
+
+.card__header .status{
+opacity: 0.5;
+}
+
+
+/*---quotes---*/
+
+.card__quote{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.card__full__quote{
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+
+/*---color---*/
+
+.card.Daniel{
+    color: white;
+    background-color: var(--purple-500);
+}
+
+.card.Patrick{
+    color: white;
+    background-color: var(--dark-blue);
+}
+
+.card.Kira{
+    color: var(--grey-500);
+    background-color: var(--white);
+}
+
+.card.Jeanette{
+    color: var(--grey-500);
+    background-color: var(--white);
+}
+
+.card.Jonathan{
+    color: var(--white);
+    background-color: var(--grey-500);
+}
+
+
+@media (min-width:600px){
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "Daniel Daniel"
+        "Jeanette Kira"
+        "Jonathan Kira"
+        "Patrick Patrick";
+        margin: 5%;
+    }
+
+
+}
+
+@media (min-width:1050px){
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas: 
+        "Daniel Daniel Jonathan Kira"
+        "Jeanette Patrick Patrick Kira";
+        margin: 7%;
+    }
+
+
+}
