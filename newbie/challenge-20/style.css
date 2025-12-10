@@ -1,0 +1,124 @@
+:root {
+  --blue-500: hsl(223, 87%, 63%);
+
+
+  --blue-200: hsl(223, 100%, 88%);
+  --red-400: hsl(354, 100%, 66%);
+
+
+  --gray-400: hsl(0, 0%, 59%);
+  --blue-950: hsl(209, 33%, 12%);
+}
+
+body{
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 20px;
+    text-align: center
+}
+
+.grid{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+
+
+}       
+
+.catch{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: var(--gray-400);
+}
+
+.bold{
+    color: black;
+    font-weight: 700;
+}
+
+.small{
+color: black;
+    font-size: 15px;
+}
+
+.image{
+    max-width: 80%;
+    margin-bottom: 35px;
+}
+
+.image img{
+    width: 100%;
+}
+
+.mail input{
+    border: 1px solid var(--gray-400);
+    border-radius: 35px;
+    padding: 1rem 1.5rem;
+    width: 300px;
+}
+
+.mail.error input{
+    border: 1px solid var(--red-400);
+
+}
+
+.message {
+    margin: 0;
+    display: none;
+}
+
+.mail.error .message{
+    color: var(--red-400);
+    font-size: 12px;
+    display: block;
+}
+
+.mail button{
+    border: none;
+    border-radius: 35px;
+    padding: 1rem 1.5rem;
+    background-color: var(--blue-500);
+    color: white;
+    width: 150px;
+}   
+
+.mail button:hover{
+    opacity: 0.7;
+}
+
+.mail{
+    display: grid;
+     grid-template-columns: 1fr;
+
+    margin-bottom: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+}
+
+.bas{
+    color: var(--blue-500);
+}
+
+.gray{
+   
+    color: var(--gray-400);
+}
+
+@media (min-width : 600px){
+
+    .mail {
+            grid-template-columns: 70% 30%;
+    grid-area: "theinput thebutton";
+        justify-content: center;
+    align-items: center;
+    }
+
+
+}

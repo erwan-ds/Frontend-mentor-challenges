@@ -26,15 +26,12 @@ body {
 
 
 .grid{
-
     display: grid;
     grid-template-columns: 1fr;
     margin: auto;
     justify-items: center;
     align-items: center;
     text-align: center;
-
-
 }
 
 .form{
@@ -45,13 +42,13 @@ body {
     padding: 20px;
     border-radius: 5px;
 }
+
 .input__wrapper {
   display: flex;
   position: relative;
   flex-direction: column;
   padding: 1rem 1.5rem;
 }
-
 
 .input__wrapper.error::after {
   content: "";
@@ -100,6 +97,7 @@ body {
 .input__wrapper.error .error-text {
   display: block;
 }
+
 p{
     margin-bottom: 0;
 }
@@ -125,13 +123,10 @@ button:hover{
 
 .desc{
     font-size: 12px;
-    
 }
 
 .red{
-
     color: var(--red-400);
-
 }
 
 .form__footer{
@@ -148,7 +143,6 @@ button:hover{
 }
 
 @media (min-width:600px){
-
     .grid{
         display: grid;
         grid-template-columns: 1fr 1fr;
