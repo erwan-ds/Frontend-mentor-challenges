@@ -5,7 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./index.js" defer></script>
+
+
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -16,29 +22,65 @@
 </head>
 <body>
 
-  <!-- Rating state start -->
+  <div class="panel show-form">
+  
+    <div class="state-form">
+      <img src="./images/icon-star.svg" alt="">
+      <h2>How did we do?</h2>
 
-  How did we do?
+      Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+      <div class="form-rate">
 
-  1 2 3 4 5
+        <input type="radio" id="rate1" name="rate" value="1">
+        <label for="rate1">1</label>
 
-  Submit
+        <input type="radio" id="rate2" name="rate" value="2">
+        <label for="rate2">2</label>
 
-  <!-- Rating state end -->
+        <input type="radio" id="rate3" name="rate" value="3">
+        <label for="rate3">3</label>
 
-  <!-- Thank you state start -->
+        <input type="radio" id="rate4" name="rate" value="4">
+        <label for="rate4">4</label>
 
-  You selected <!-- Add rating here --> out of 5
+        <input type="radio" id="rate5" name="rate" value="5">
+        <label for="rate5">5</label>
 
-  Thank you!
+    </div>
+    <div>
+ <button class="submit">Submit</button>
 
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
+    </div>
+   
+      
+    </div>
 
-  <!-- Thank you state end -->
+    <div class="state-thanks">
+      <img src="./images/illustration-thank-you.svg">
+      <div class="rating"> you selected <span class="value" >0</span> out of 5 </div>
+      
+
+      <h2>Thank you!</h2>
+      <div class="desc">
+      We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  
 
   
   <div class="attribution">
