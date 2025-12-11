@@ -1,0 +1,167 @@
+:root {
+
+  --gradient-main: linear-gradient(
+    135deg,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+
+
+  --blue-200: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --blue-850: hsl(228, 56%, 26%);
+  --blue-900: hsl(224,61%,15%);
+  --blue-600: hsl(228,55%,62%);
+
+  --font-size : 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway";
+    font-size: var(--font-size);
+    font-weight: 400;
+    color: var(--blue-200);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-900);
+    min-height: 100dvh;
+    background-image: url(./images/bg-mobile.png);
+    background-position: 0% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+
+/* --- grid --- */
+.grid{
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* --- menu --- */
+
+.menu{
+    background-color: var(--blue-850);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    width: 250px;
+    border-radius: 10px 65px 10px 10px;
+    gap: 25px;
+    margin: 25px;
+}
+.menu .icon {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.menu .icon div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: var(--blue-900);
+    width: 40px;
+    height: 40px;
+}
+
+
+
+/* --- storage --- */
+
+.storage{
+
+    background-color: var(--blue-850);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+
+}
+
+progress {
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+  background: var(--blue-900); 
+}
+
+
+progress::-webkit-progress-value {
+  background: linear-gradient(
+    90deg,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+}
+
+.progress__wrapper {
+  position: relative;
+  width: 300px;
+}
+
+
+.progress-dot {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -8%);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border: 2px solid hsl(335, 100%, 65%);
+  border-radius: 50%;
+
+
+  left: calc(
+    (var(--val) / var(--max)) * 100%
+  );
+}
+
+
+.progress__wrapper {
+  --val: attr(data-progress number);
+  --max: attr(data-max number);
+}
+
+.progress__value {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.right{
+    margin-left: auto;
+}
+
+
+@media (min-width : 600px){
+
+.grid {
+    flex-direction: row;
+    
+}
+
+body{
+    background-image: url(./images/bg-desktop.png);
+    background-position: bottom left;
+    background-size: auto 50% ;
+}
+}
