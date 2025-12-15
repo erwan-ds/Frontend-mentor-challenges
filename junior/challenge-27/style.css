@@ -1,0 +1,316 @@
+
+:root {
+  /* ===== Primary ===== */
+  --color-primary-soft-cyan: hsl(174, 77%, 80%);
+  --color-primary-strong-cyan: hsl(174, 86%, 45%);
+  --color-primary-discount-bg: hsl(14, 92%, 95%);
+  --color-primary-discount-text: hsl(15, 100%, 70%);
+  --color-primary-cta-text: hsl(226, 100%, 87%);
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-bg-main: hsl(230, 100%, 99%);
+  --color-slider-empty: hsl(224, 65%, 95%);
+  --color-toggle-bg: hsl(223, 50%, 87%);
+  --color-text-muted: hsl(225, 20%, 60%);
+  --color-text-dark: hsl(227, 35%, 25%);
+
+  --font-size-body: 15px;
+
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+}
+
+
+body{
+
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-body);
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("./images/bg-pattern.svg");
+    background-repeat: no-repeat;
+    background-color: white;
+
+}
+
+/* --- structure --- */
+
+.card{
+      
+    grid-template-columns: 1fr;
+    grid-template-areas:    "views"
+                            "slidebar"
+                            "pricing"
+                            "billing"
+                            "access"
+                            "button";
+    background-color: white;
+    box-shadow: -2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    margin: 25px;
+    
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card__views{
+    grid-area: views;
+    padding: 25px;
+}
+
+.card__slidebar{
+    grid-area: slidebar;
+    padding: 25px;
+}
+
+.card__pricing{
+    grid-area: pricing;
+    padding: 25px;
+    color: var(--color-text-muted);
+    font-weight: 800;
+}
+
+.pricingNumber{
+    font-size: 24px;
+    color: var(--color-text-dark);
+}
+
+.card__billing{
+    grid-area: billing;
+    margin-bottom: 35px;
+}
+
+.card__access{
+    grid-area: access;
+    padding: 25px;
+
+}
+
+.card__trial{
+    grid-area: button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+
+}
+
+/* --- title --- */
+.title{
+    text-align: center;
+    background-image: url("./images/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px;
+}
+
+.title h1{
+    color: var(--color-text-dark);
+    font-weight: 800;
+}
+
+.title p{
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+/* --- views --- */
+
+
+
+.card__views{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: var(--color-text-muted);
+}
+
+/* --- slidebar --- */
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: transparent;
+    cursor: pointer;
+    background: linear-gradient(
+    to right,
+    var(--color-primary-soft-cyan) 0%,
+    var(--color-primary-soft-cyan) 50%,
+    var(--color-slider-empty) 50%,
+    var(--color-slider-empty) 100%
+  );
+    border-radius: 999px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {    /* --- Chrome / Edge / Safari --- */
+  height: 8px;
+  border-radius: 999px;
+}
+
+input[type="range"]::-moz-range-track {                 /* --- firefox --- */
+  height: 8px;
+  border-radius: 999px;
+}
+
+input[type="range"]::-webkit-slider-thumb {             /* --- Chrome / Edge / Safari --- */
+  -webkit-appearance: none;
+  width: 35px;
+  height: 35px;
+  background-color: var(--color-primary-strong-cyan);
+  background-image: url("./images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  margin-top: -15px; 
+}
+
+input[type="range"]::-moz-range-thumb {                 /* --- firefox --- */
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-primary-strong-cyan);
+    background-image: url("./images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    border: none;
+}
+
+
+/* --- switch --- */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+}
+
+.switch__slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+
+}
+
+
+input:checked + .switch__slider {
+  background-color: var(--color-primary-soft-cyan);
+}
+
+input:focus + .switch__slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .switch__slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+.card__billing{
+    color: var(--color-text-muted);
+        font-weight: 800;
+}
+
+.card__access {
+    color: var(--color-text-muted);
+    border-top: 1px solid var(--color-slider-empty) ;
+}
+
+.card__trial button{
+    background-color: var(--color-text-dark);
+    color: var(--color-white);
+    border: none;
+    border-radius: 35px;
+    width: 185px;
+    font-weight: 600;
+    padding: 20px 25px;
+}
+
+/* --- discount --- */
+
+.discount{
+    background-color: var(--color-primary-discount-bg);
+    color: var(--color-primary-discount-text);
+    border-radius: 35px;
+    padding: 2px 10px;
+
+}
+
+
+
+/* --- list --- */
+
+
+.card__access ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    
+    font-weight: 800;
+}
+.card__access li{
+    padding: 10px 0;
+}
+
+.card__access li::before{
+    content: url("./images/icon-check.svg");
+    padding-right: 15px;
+ 
+}
+
+
+
+@media (min-width : 768px){
+
+    .card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:    "views pricing"
+                                "slidebar slidebar"
+                                "billing billing"
+                                "access button";
+    }
+
+    .card__trial{
+
+        border-top: 1px solid var(--color-slider-empty);
+    }
+
+    .card__access li{
+    text-align: left;
+    }
+}
