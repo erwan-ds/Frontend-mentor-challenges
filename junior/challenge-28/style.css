@@ -1,4 +1,18 @@
+:root {
+  --color-cyan-soft: hsl(174, 77%, 80%);
+  --color-cyan-strong: hsl(174, 86%, 45%);
+  --color-red-light-bg: hsl(14, 92%, 95%);
+  --color-red-light-text: hsl(15, 100%, 70%);
+  --color-blue-pale-cta-text: hsl(226, 100%, 87%);
 
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-blue-very-pale-bg: hsl(229, 65%, 93%);
+  --color-blue-light-slider: hsl(224, 65%, 95%);
+  --color-blue-light-toggle: hsl(223, 50%, 87%);
+  --color-blue-gray-text: hsl(225, 20%, 60%);
+  --color-blue-dark-cta-bg: hsl(227, 35%, 25%);
+}
 
 
 body{
@@ -9,6 +23,10 @@ body{
     justify-content: center;
     align-items: center;
 
+    font-family: "Manrope";
+    font-size: 15px;
+
+    background-color: var(--color-blue-very-pale-bg);
 }
 
 
@@ -44,6 +62,7 @@ li.card{
 
 .card__notif{
     grid-area: notif;
+    position: relative;
 }
 
 .card__timer{
@@ -61,18 +80,115 @@ li.card{
 .card__data{
     grid-area: data;
 }
+/* --- avatar --- */
+
+.card__avatar img{
+    width: 36px;
+    height: 36px;
+}
+
+/* --- name --- */
+
+.card__name{
+    font-weight: 800;
+}
+
+/* --- notif --- */
+
+.card__notif{
+    color: var(--color-blue-gray-text);
+}
+
 
 /* --- header --- */
+
+header{
+    margin: 50px;
+    font-size: 24px;
+    font-weight: 800;
+    display: flex;
+
+}
+.Notifications__counter{
+    color: var(--color-white);
+    background-color: var(--color-blue-dark-cta-bg);
+    padding: 0rem 1rem;
+    border-radius: 5px;
+}
+
+.remove__unread{
+    color: var(--color-blue-gray-text);
+    font-size: 15px;
+    text-align: left;
+    margin-left: auto;
+}
+
+
 
 /* --- container --- */
 
 .container{
-
+    background-color: var(--color-white);
     margin: 25px;
 
 }
+/* --- card --- */
+
+.card{
+    margin:5px 50px;
+    border-radius: 5px;
+ 
+}
+/* --- date --- */
+
+.card__timer{
+    color: var(--color-blue-gray-text);
+}
 
 
+/* --- card unread --- */
+
+.card.unread{
+    background-color: var(--color-blue-very-pale-bg);
+}
+
+.card.unread .icon{
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-left: 0.4rem;
+
+    border-radius: 50%;
+    background-color: var(--color-red-light-text);
+
+    vertical-align: middle;
+}
+
+.post{
+    font-weight: 800;
+}
+
+.group{
+    font-weight: 800;
+    color: var(--color-blue-dark-cta-bg);
+}
+
+.card__content:not(:empty){
+    padding: 1rem;
+    border: 1px solid var(--color-blue-gray-text);
+    border-radius: 5px;
+}
+.card__image{
+  display: flex;
+  justify-content: flex-end; 
+  align-items: flex-start; 
+}
+
+.card__image img{
+    width: 36px;
+    height: 36px;
+    right: 0;
+}
 
 @media (min-width){
     

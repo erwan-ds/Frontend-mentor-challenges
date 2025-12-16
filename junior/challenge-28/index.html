@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+  
+  
+  
   <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | Notifications page</title>
   <script src="./index.js" defer></script>
@@ -24,20 +31,20 @@
           <div class="card__avatar"><img src="./assets/images/avatar-mark-webber.webp"></div>
           <div class="card__data">
           <span class="card__name"> Mark Webber </span>
-          <span class="card__notif"> reacted to your recent post My first tournament today! </span>
+          <span class="card__notif"> reacted to your recent post <span class="post"> My first tournament today!</span><span class="icon"> </span> </span>
           </div>
           <div class="card__timer"> 1m ago </div>
-          <div class="card__content">  </div>
+          <div class="card__content"></div>
           <div class="card__image"></div>
         </li>
         <li class="card unread">
           <div class="card__avatar"><img src="./assets/images/avatar-angela-gray.webp"></div>
           <div class="card__data">
           <span class="card__name">  Angela Gray </span>
-          <span class="card__notif"> followed you </span>
+          <span class="card__notif"> followed you<span class="icon"></span> </span>
           </div>
           <div class="card__timer"> 5m ago </div>
-          <div class="card__content">  </div>
+          <div class="card__content"></div>
           <div class="card__image"></div>
         </li>
         <li class="card unread">   
@@ -45,17 +52,17 @@
 
           <div class="card__data">
           <span class="card__name"> Jacob Thompson </span>
-          <span class="card__notif"> has joined your group Chess Club </span>
+          <span class="card__notif"> has joined your group <span class="group">Chess Club</span><span class="icon"></span> </span>
           </div>
           <div class="card__timer"> 1 day ago </div>
-          <div class="card__content">  </div>
+          <div class="card__content"></div>
           <div class="card__image"></div>
         </li>
         <li class="card">
           <div class="card__avatar"><img src="./assets/images/avatar-rizky-hasanuddin.webp"></div>
           <div class="card__data">
           <span class="card__name"> Rizky Hasanuddin </span>
-          <span class="card__notif"> sent you a private message </span>
+          <span class="card__notif"> sent you a private message<span class="icon"></span> </span>
           </div>
           <div class="card__timer"> 5 days ago </div>
           <div class="card__content">    
@@ -68,22 +75,22 @@
           <div class="card__avatar"><img src="./assets/images/avatar-kimberly-smith.webp"></div>
           <div class="card__data">
           <span class="card__name"> Kimberly Smith  </span>
-          <span class="card__notif"> commented on your picture </span>
+          <span class="card__notif"> commented on your picture<span class="icon"></span> </span>
           </div>
           <div class="card__timer"> 1 week ago </div>
-          <div class="card__content">  </div>
-          <div class="card__image"></div>
+          <div class="card__content"></div>
+          <div class="card__image"><img src="./assets/images/image-chess.webp"></div>
         </li>
         <li class="card">
           <div class="card__avatar"><img src="./assets/images/avatar-nathan-peterson.webp"></div>
 
           <div class="card__data">
           <span class="card__name"> Nathan Peterson  </span>
-          <span class="card__notif"> reacted to your recent post 5 end-game strategies to increase your win rate </span>
+          <span class="card__notif"> reacted to your recent post <span class="post">5 end-game strategies to increase your win rate</span><span class="icon"></span> </span>
           </div>
           
           <div class="card__timer"> 2 weeks ago </div>
-          <div class="card__content">  </div>
+          <div class="card__content"></div>
           <div class="card__image"></div>
         </li>
         <li class="card">
@@ -91,10 +98,10 @@
 
                     <div class="card__data">
           <span class="card__name"> Anna Kim  </span>
-          <span class="card__notif"> left the group Chess Club </span>
+          <span class="card__notif"> left the group <span class="group">Chess Club</span><span class="icon"> </span> </span>
           </div>
           <div class="card__timer">   2 weeks ago </div>
-          <div class="card__content">  </div>
+          <div class="card__content"></div>
           <div class="card__image"></div>
         </li>
       </ul>
