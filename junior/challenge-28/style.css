@@ -42,11 +42,11 @@ ul{
 li.card{
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 50px 1fr 50px ;
     grid-template-areas:    "avatar data  image"
                             "avatar timer  image"
                             "avatar content  content";
-    padding: 25px;
+    padding: 12px 25px;
     
 }
 
@@ -103,7 +103,7 @@ li.card{
 /* --- header --- */
 
 header{
-    margin: 50px;
+    margin: 25px 50px;
     font-size: 24px;
     font-weight: 800;
     display: flex;
@@ -113,6 +113,7 @@ header{
     color: var(--color-white);
     background-color: var(--color-blue-dark-cta-bg);
     padding: 0rem 1rem;
+    margin-left: 15px;
     border-radius: 5px;
 }
 
@@ -136,7 +137,7 @@ header{
 
 .card{
     margin:5px 50px;
-    border-radius: 5px;
+    border-radius: 10px;
  
 }
 /* --- date --- */
