@@ -1,0 +1,81 @@
+
+
+
+body{
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+ul{
+    list-style: none;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+
+li.card{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-areas:    "avatar data  image"
+                            "avatar timer  image"
+                            "avatar content  content";
+    padding: 25px;
+    
+}
+
+/* --- grid area --- */
+
+.card__avatar{
+    grid-area: avatar;
+}
+
+.card__name{
+    grid-area: name;
+}
+
+.card__notif{
+    grid-area: notif;
+}
+
+.card__timer{
+    grid-area: timer;
+}
+
+.card__content{
+    grid-area: content;
+}
+
+.card__image{
+    grid-area: image;
+}
+
+.card__data{
+    grid-area: data;
+}
+
+/* --- header --- */
+
+/* --- container --- */
+
+.container{
+
+    margin: 25px;
+
+}
+
+
+
+@media (min-width){
+    
+
+
+}

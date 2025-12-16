@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | Notifications page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -23,53 +23,85 @@
     </header>
 
     <section class="Notifications">
+      <ul>
+        <li class="card unread">
+          <div class="card__avatar"><img src="./assets/images/avatar-mark-webber.webp"></div>
+          <div class="card__data">
+          <span class="card__name"> Mark Webber </span>
+          <span class="card__notif"> reacted to your recent post My first tournament today! </span>
+          </div>
+          <div class="card__timer"> 1m ago </div>
+          <div class="card__content">  </div>
+          <div class="card__image"></div>
+        </li>
+        <li class="card unread">
+          <div class="card__avatar"><img src="./assets/images/avatar-angela-gray.webp"></div>
+          <div class="card__data">
+          <span class="card__name">  Angela Gray </span>
+          <span class="card__notif"> followed you </span>
+          </div>
+          <div class="card__timer"> 5m ago </div>
+          <div class="card__content">  </div>
+          <div class="card__image"></div>
+        </li>
+        <li class="card unread">   
+          <div class="card__avatar"><img src="./assets/images/avatar-jacob-thompson.webp"></div>
 
-      <div class="card unread">
-        <div class="card__name"> Mark Webber </div>
-        <div class="card__notif"> reacted to your recent post My first tournament today! </div>
-        <div class="card__timer"> 1m ago </div>
-        <div class="card__content">  </div>
-      </div>
-      <div class="card unread">
-        <div class="card__name">   Angela Gray
-   </div>
-        <div class="card__notif">  followed you </div>
-        <div class="card__timer"> 5m ago </div>
-        <div class="card__content">  </div>
-      </div>
-      <div class="card unread">   
-        <div class="card__name"> Jacob Thompson </div>
-        <div class="card__notif"> has joined your group Chess Club </div>
-        <div class="card__timer"> 1 day ago </div>
-        <div class="card__content">  </div>
-      </div>
-      <div class="card">
-        <div class="card__name"> Rizky Hasanuddin </div>
-        <div class="card__notif"> sent you a private message </div>
-        <div class="card__timer"> 5 days ago </div>
-        <div class="card__content">    
-          Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-          I'm already having lots of fun and improving my game. </div>
-      </div>
-      <div class="card">
-        <div class="card__name">   Kimberly Smith 
-   </div>
-        <div class="card__notif"> commented on your picture </div>
-        <div class="card__timer"> 1 week ago </div>
-        <div class="card__content">  </div>
-      </div>
-      <div class="card">
-        <div class="card__name">   Nathan Peterson </div>
-        <div class="card__notif">  reacted to your recent post 5 end-game strategies to increase your win rate </div>
-        <div class="card__timer"> 2 weeks ago </div>
-        <div class="card__content">  </div>
-      </div>
-      <div class="card">
-        <div class="card__name"> Anna Kim </div>
-        <div class="card__notif"> left the group Chess Club </div>
-        <div class="card__timer">   2 weeks ago </div>
-        <div class="card__content">  </div>
-      </div>
+          <div class="card__data">
+          <span class="card__name"> Jacob Thompson </span>
+          <span class="card__notif"> has joined your group Chess Club </span>
+          </div>
+          <div class="card__timer"> 1 day ago </div>
+          <div class="card__content">  </div>
+          <div class="card__image"></div>
+        </li>
+        <li class="card">
+          <div class="card__avatar"><img src="./assets/images/avatar-rizky-hasanuddin.webp"></div>
+          <div class="card__data">
+          <span class="card__name"> Rizky Hasanuddin </span>
+          <span class="card__notif"> sent you a private message </span>
+          </div>
+          <div class="card__timer"> 5 days ago </div>
+          <div class="card__content">    
+            Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+            I'm already having lots of fun and improving my game. 
+          </div>
+          <div class="card__image"></div>
+        </li>
+        <li class="card">
+          <div class="card__avatar"><img src="./assets/images/avatar-kimberly-smith.webp"></div>
+          <div class="card__data">
+          <span class="card__name"> Kimberly Smith  </span>
+          <span class="card__notif"> commented on your picture </span>
+          </div>
+          <div class="card__timer"> 1 week ago </div>
+          <div class="card__content">  </div>
+          <div class="card__image"></div>
+        </li>
+        <li class="card">
+          <div class="card__avatar"><img src="./assets/images/avatar-nathan-peterson.webp"></div>
+
+          <div class="card__data">
+          <span class="card__name"> Nathan Peterson  </span>
+          <span class="card__notif"> reacted to your recent post 5 end-game strategies to increase your win rate </span>
+          </div>
+          
+          <div class="card__timer"> 2 weeks ago </div>
+          <div class="card__content">  </div>
+          <div class="card__image"></div>
+        </li>
+        <li class="card">
+          <div class="card__avatar"><img src="./assets/images/avatar-anna-kim.webp"></div>
+
+                    <div class="card__data">
+          <span class="card__name"> Anna Kim  </span>
+          <span class="card__notif"> left the group Chess Club </span>
+          </div>
+          <div class="card__timer">   2 weeks ago </div>
+          <div class="card__content">  </div>
+          <div class="card__image"></div>
+        </li>
+      </ul>
     </section>
   </main>
 
