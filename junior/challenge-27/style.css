@@ -204,10 +204,12 @@ input[type="range"]::-moz-range-thumb {                 /* --- firefox --- */
 .switch__slider {
   position: absolute;
   cursor: pointer;
+  
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  
   background-color: #ccc;
   border-radius: 20px;
 }
@@ -215,10 +217,13 @@ input[type="range"]::-moz-range-thumb {                 /* --- firefox --- */
 .switch__slider:before {
   position: absolute;
   content: "";
+
+
   height: 13px;
   width: 13px;
   left: 4px;
   bottom: 3px;
+  
   background-color: white;
   border-radius: 50%;
 
