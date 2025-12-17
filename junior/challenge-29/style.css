@@ -1,0 +1,276 @@
+:root {
+    --purple-600: hsl(246, 80%, 60%);
+    --orange-300: hsl(15, 100%, 70%);  
+    --blue-300: hsl(195, 74%, 62%);    
+    --pink-400: hsl(348, 100%, 68%);    
+    --green-400: hsl(145, 58%, 55%);    
+    --purple-700: hsl(264, 64%, 52%);   
+    --yellow-300: hsl(43, 84%, 65%);    
+    --navy-950: hsl(226, 43%, 10%);
+    --navy-900: hsl(235, 46%, 20%);
+    --purple-500: hsl(235, 45%, 61%);
+    --navy-200: hsl(236, 100%, 87%);
+    --font-base: 18px;
+}
+
+
+body{
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Rubik";
+    background-color: var(--navy-950);
+
+    color: var(--navy-200);
+
+}
+
+.avatarCard{
+    background-color: var(--purple-600);
+    padding: 25px;
+    margin: -10px;
+    border-radius: 15px;
+}
+
+
+.profils {
+    margin: 25px;
+    background-color: var(--navy-900);
+    border-radius: 15px;
+    padding: 10px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.periodSelection{
+    display: flex;
+    padding: 25px;
+    flex-direction: row;
+}
+
+.periodSelection button{
+    border: none;
+    color: var(--navy-200);
+    background-color: transparent;
+}
+
+
+
+.dataCard{
+
+    margin: 25px;
+    padding: 50px 10px 10px 10px;
+    border-radius: 15px;
+    width: 200px;
+    
+    position: relative;
+    overflow: hidden;
+}
+
+.dataCard.Work{
+    background-color: var(--orange-300);
+}
+
+.dataCard.Exercise{
+    background-color: var(--green-400);
+}
+
+.dataCard.Social{
+    background-color: var(--purple-700);
+}
+.dataCard.Play{
+    background-color: var(--blue-300);
+}
+.dataCard.Study{
+    background-color: var(--pink-400);
+}
+.dataCard.Self{
+    background-color: var(--yellow-300);
+}
+
+.dataCard.Work::before {
+    content: "";
+    position: absolute;
+
+    top: -5px;
+    right: 15px;
+
+    width: 60px;
+    height: 60px;
+
+    background-image: url("./images/icon-work.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.8;       
+}
+
+
+.dataCard.Study::before {
+    content: "";
+    position: absolute;
+
+    top: -5px;
+    right: 15px;
+
+    width: 60px;
+    height: 60px;
+
+    background-image: url("./images/icon-study.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.8;       
+}
+
+.dataCard.Play::before {
+    content: "";
+    position: absolute;
+
+    top: -5px;
+    right: 15px;
+
+    width: 60px;
+    height: 60px;
+
+    background-image: url("./images/icon-play.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.8;       
+}
+.dataCard.Exercise::before {
+    content: "";
+    position: absolute;
+
+    top: -5px;
+    right: 15px;
+
+    width: 60px;
+    height: 60px;
+
+    background-image: url("./images/icon-exercise.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.8;       
+}
+
+.dataCard.Social::before {
+    content: "";
+    position: absolute;
+
+    top: -5px;
+    right: 15px;
+
+    width: 60px;
+    height: 60px;
+
+    background-image: url("./images/icon-social.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.8;       
+}
+
+.dataCard.Self::before {
+    content: "";
+    position: absolute;
+
+    top: -5px;
+    right: 15px;
+
+    width: 60px;
+    height: 60px;
+
+    background-image: url("./images/icon-self-care.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.8;       
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.dataContainer{
+    background-color: var(--navy-900);    
+    padding: 25px;
+    margin: -10px;
+    border-radius: 13px ;
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title img{
+    margin-left: auto;
+}
+
+.current{
+    font-size: 36px;
+}
+
+.previous{
+    display: inline-block;
+    font-size: 12px;
+    color: var(--purple-500);
+}
+
+.avatarCard img{
+
+    width: 56px;
+    border: 2px solid white;
+    border-radius: 50%;
+
+}
+
+.report{
+    font-size: 12px;
+}
+
+.name{
+    font-size: 18px;
+    color: white;
+}
+
+
+@media (min-width : 600px){
+
+
+     .periodSelection{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        gap: 15px;
+     }
+
+    .periodSelection button{
+        text-align: left;
+    }
+    
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cardmap{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
