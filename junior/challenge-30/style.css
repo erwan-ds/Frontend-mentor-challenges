@@ -1,0 +1,195 @@
+:root {
+  /* Primary */
+  --red-500: hsl(10, 79%, 65%);
+  --blue-300: hsl(186, 34%, 65%);
+
+  /* Neutral */
+  --brown-950: hsl(25, 47%, 15%);
+  --brown-400: hsl(28, 10%, 53%);
+  --red-100: hsl(26, 66%, 93%);
+
+  /* Typography */
+  --font-size-base: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: var(--font-size-base);
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--red-100);
+    color: var(--brown-950);
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+header .logo{
+    grid-area: logo;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+}
+
+header .logo img {
+    width: 50px;
+}
+
+header .balance{
+    grid-area: balance;
+    font-size: 12px;
+}
+
+header .number{
+    grid-area: number;
+    font-size: 32px;
+}
+
+
+
+header{
+
+    background-color: var(--red-500);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:    "balance logo"
+                            "number logo";
+    padding: 10px 25px;
+    width: 300px;
+    margin-top: 50px;
+    border-radius: 15px;
+
+    color: white;
+
+}
+
+/* --- header --- */
+
+.content{
+
+    background-color: white;
+    margin-top: 35px;
+    padding : 15px ;
+    border-radius: 15px;
+    
+}
+
+.chart{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.char__weekchart{
+    display: flex;
+    flex-direction: row;
+}
+
+.chart__header{
+    font-weight: 700;
+}
+
+
+
+
+
+.sum__number{
+    grid-area: sum__number;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.sum__ratio {
+    grid-area: sum__ratio;
+    text-align: right;
+    font-weight: 700;
+    font-size: 15px;
+
+
+}
+
+.sum__date{
+    grid-area : sum__date;
+    font-size: 15px;
+    color: var(--brown-400);
+    text-align: right;
+
+}
+
+.summary__title{
+    grid-area:summary__title ;
+    font-size: 15px;
+    color: var(--brown-400);
+}
+
+
+
+.summary{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas:    "summary__title summary__title"
+                            "sum__number sum__ratio"
+                            "sum__number sum__date";
+
+    border-top: 1px solid var(--brown-400);
+    padding-top: 15px;
+
+}
+
+.popup{
+    position: absolute;
+    top: -10px;           
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--brown-950);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: none;
+    white-space: nowrap;
+}
+
+.day{
+    width: 30px;
+    margin: 5px;
+    font-size: 15px;
+      position: relative;
+     display: flex;
+  flex-direction: column;
+}
+
+.fill{
+    background-color: var(--red-500);
+    border-radius: 3px;
+}
+
+.fill:hover{
+
+    opacity: 0.7;
+
+}
+
+.day:hover .popup{
+    display: block;
+}
+
+.name{
+    padding-top : 10px ;
+    color: var(--brown-400);
+    text-align: center;
+}
+
+.blue{
+    background-color: var(--blue-300);
+}
